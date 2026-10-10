@@ -1,0 +1,249 @@
+.fc-ingredients-empty {
+  padding: 48px 24px;
+  text-align: center;
+  background-color: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.fc-ingredients-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 4px;
+  margin-bottom: 24px;
+}
+
+.fc-ingredient-item-card {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.fc-ingredient-item-card:hover {
+  border-color: var(--primary);
+}
+
+.fc-ingredient-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.fc-ingredient-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.fc-btn-remove-ing {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color var(--transition-fast);
+}
+
+.fc-btn-remove-ing:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.fc-ingredient-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.fc-qty-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.fc-qty-input {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--surface);
+  outline: none;
+}
+
+.fc-qty-unit {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.fc-confidence-badge {
+  font-size: 0.725rem;
+  color: var(--primary);
+  font-weight: 600;
+  background-color: var(--primary-light);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+
+.fc-ingredients-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.fc-btn-add-manual {
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.fc-btn-add-manual:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.fc-btn-confirm-ing {
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-green);
+  transition: all var(--transition-fast);
+}
+
+.fc-btn-confirm-ing:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.fc-btn-confirm-ing:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Add Ingredient Modal Overlays */
+.add-ingredient-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(7, 17, 12, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.add-ingredient-modal {
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  color: var(--text-primary);
+}
+
+.add-ingredient-modal h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.add-ingredient-modal p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.add-ingredient-modal label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+.add-ingredient-modal input,
+.add-ingredient-modal select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.add-ingredient-modal .close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.add-submit-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-green);
+  border: none;
+  cursor: pointer;
+}
+
+.add-submit-button:hover {
+  background-color: var(--primary-dark);
+}

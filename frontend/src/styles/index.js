@@ -1,0 +1,16 @@
+import './variables.css';
+import './global.css';
+import './buttons.css';
+import './navbar.css';
+import './sidebar.css';
+import './topbar.css';
+import './dashboard.css';
+import './home.css';
+import './upload.css';
+import './ingredients.css';
+import './meals.css';
+import './recipe-modal.css';
+import './shopping-list.css';
+import './auth.css';
+import './toast.css';
+import './responsive.css';

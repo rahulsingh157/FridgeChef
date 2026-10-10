@@ -1,0 +1,170 @@
+/* ==================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ================================================== */
+
+@media (max-width: 1440px) {
+  .fc-container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 240px;
+  }
+
+  .fc-meals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 220px;
+  }
+
+  .fc-hero-title {
+    font-size: 3rem;
+  }
+
+  .fc-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .fc-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .fc-benefits-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fc-how-it-works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fc-step-arrow {
+    display: none;
+  }
+
+  .fc-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .fc-sidebar {
+    transform: translateX(-100%);
+    width: 260px;
+    z-index: 1000;
+  }
+
+  .fc-sidebar.fc-sidebar-open {
+    transform: translateX(0);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .fc-dashboard-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .fc-topbar {
+    padding: 0 16px;
+  }
+
+  .fc-dashboard-content {
+    padding: 20px 16px;
+  }
+
+  .fc-welcome-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fc-welcome-card-promo {
+    width: 100%;
+  }
+
+  .fc-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fc-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .fc-hero-title {
+    font-size: 2.35rem;
+  }
+
+  .fc-stats-row {
+    justify-content: space-around;
+  }
+
+  .fc-floating-card {
+    display: none;
+  }
+
+  .fc-benefits-strip {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+
+  .fc-how-it-works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fc-meals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fc-ready-cook-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fc-btn-cook {
+    width: 100%;
+  }
+
+  .fc-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .fc-hero-title {
+    font-size: 2rem;
+  }
+
+  .fc-welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .fc-topbar-left {
+    display: none;
+  }
+
+  .fc-stats-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fc-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .fc-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .fc-section-title {
+    font-size: 1.6rem;
+  }
+}
